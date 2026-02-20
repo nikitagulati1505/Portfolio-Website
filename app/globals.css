@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 228 12% 8%;
+    --foreground: 210 20% 95%;
+    --muted: 225 10% 14%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 210 20% 98%;
+    --card: 225 12% 11%;
+    --card-foreground: 210 20% 95%;
+    --border: 220 10% 18%;
+    --radius: 0.625rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(228 12% 8%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(220 10% 22%);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(220 10% 30%);
+}
